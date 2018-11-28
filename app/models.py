@@ -7,9 +7,10 @@ class User(db.Model):
     username = db.Column(db.String(255))
     role_id = db.Column(db.Integer,db.Foreinkey('roles.id'))
 
-
     def __repr__(self):
         return f'User {self.username}' 
+
+        pass_secure = db.Column(db.String(255))
 
 
 class Role(db.Model):
