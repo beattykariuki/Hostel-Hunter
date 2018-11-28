@@ -1,11 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,TextAreaField,SubmitField
+from wtforms import Form,StringField,SelectField
 from wtforms.validators import Required
 
 class SearchForm(FlaskForm):
-    name = StringField('University Name:', validators=[Required()])
+    choices=[('University','University'),
+             ('Hostel','Hostel')]
+    select = SelectField('search name....',choices=choices)
 
-    search = TextAreaField('search name....')
-
-    submit = SubmitField('Submit')
-  
+    search = StringField('')
+    

@@ -1,6 +1,6 @@
 from . import db
 
-class University
+class University:
     def __init__(self,id,name,content):
         self.id =id
         self.name = name

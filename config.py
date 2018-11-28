@@ -4,8 +4,6 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kevine:2001kevi@localhost/hostel'
     
-    app.config['WHOOSH_BASE']= 'whoosh'
-
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kevine:2001kevi@localhost/hostel'
     DEBUG = True
