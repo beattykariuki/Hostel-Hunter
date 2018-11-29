@@ -10,3 +10,7 @@ def index():
     '''
     title = "HOME"
     return render_template('index.html', title=title)
+
+from flask_login import login_required
+from flask_login import UserMixin
+
