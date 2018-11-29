@@ -3,9 +3,10 @@ from wtforms import Form,StringField,SelectField
 from wtforms.validators import Required
 
 class SearchForm(FlaskForm):
-    choices=[('University','University'),
+    choices=[('select','select'),
+             ('University','University'),
              ('Hostel','Hostel')]
-    select = SelectField('search name....',choices=choices)
+    select = SelectField('',choices=choices)
 
     search = StringField('')
     

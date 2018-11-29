@@ -6,7 +6,6 @@ from . import main
 from .. import db
 from flask import flash
 
-# init_db()
 @main.route('/', methods=['GET', 'POST'])
 def index():
     search = SearchForm(request.form)
@@ -27,8 +26,10 @@ def search_results(search):
 # display results
     else:
         return render_template('results.html', results=results)
-
-
-
 if __name__ == '__main__':
     app.run()
+@main.route('/search1')
+def search1():
+    title='Universities'
+    return render_template('search1.html')
+

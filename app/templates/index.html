@@ -6,17 +6,121 @@
 <link rel="stylesheet" href="../static/index.css">
 {% endblock %}
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
 {% block content%}
-<div class="container">
+<h2 class="heading">Hostel Hunter</h2>
+<div class="form">
     {% from "macros.html" import render_field %}
     <form method=post>
-        <h2 style="text-align:center">Search</h2>
                 <dl>
                     {{ render_field(form.select) }}
-                    <p>
                         {{ render_field(form.search) }}
                 </dl>
-        <p><input type=submit value=Search>
+            <a href="{{url_for('main.search1')}}" class="button button-accent">search</a>
     </form>
-</div>
+    </div>
+    <div>
+        <div class="data">
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image1.jpeg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Qwetu Hostel</h3>
+                    <p>Jogoo Rd, off</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image2.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Beulah Hostel</h3>
+                    <p>Mokoyeti Rd W, Nairobi</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+        <div class="imgBox">
+            <img src="static/image3.jpg">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h3>Flora Hostel</h3>
+                <p>5th Ngong Avenue along Ngong Road</p>
+            </div>
+        </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image4.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Keri Hostel</h3>
+                    <p>Madaraka, Strathmore University</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image5.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Roometo Hostel</h3>
+                    <p>Kilimani Estate, Nairobi</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image6.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Gomwe Men's Hostel</h3>
+                    <p>Madaraka Estate</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image7.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Kibra Hostels</h3>
+                    <p>Kibera Dr, Nairobi</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="static/image8.jpg">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h3>Mirvin's Hostel</h3>
+                    <p>Mokoyeti Rd W, Nairobi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock%}
+</body>
+</html>
+
+
+
+

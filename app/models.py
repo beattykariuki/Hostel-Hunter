@@ -1,7 +1,7 @@
 from . import db
 
 class University:
-    def __init__(self,id,name,content):
+    def __init__(self,id,name,content,image):
         self.id =id
         self.name = name
         self.content = content
