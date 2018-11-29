@@ -1,4 +1,5 @@
 import os
+<<<<<<< HEAD
  
  class Config():
      '''
@@ -24,10 +25,58 @@ class DevConfig(Config):
     '''
     DEBUG = True
     ENV = 'development'
+=======
+
+class Config:
+    '''
+    General configuration parent class
+    '''
+    #  email configurations
+
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+    MAIL_USERNAME = os.environ.get("EMAIL_USERNAME")
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:maroon5@localhost/hostel'
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
+    DEBUG = True
+
+    # simple mde  configurations
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CDN = True
+
+class ProdConfig(Config):
+    '''
+    Production configuration child class
+
+    Args: 
+        Config: The parent configuration class with General configuration settings
+    '''
+
+
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
+
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:maroon5@localhost/hostel_test'
+
+class DevConfig(Config):
+    '''
+    Development configuration child class
+    Args:
+        Config: The parent configuration class with general configuration settings 
+    '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:maroon5@localhost/hostel'
+    DEBUG = True
+>>>>>>> review
 
 config_options = {
     'development':DevConfig,
     'production':ProdConfig,
+<<<<<<< HEAD
     'test':TestConfig
 }
 
@@ -36,4 +85,12 @@ class ProdConfig(Config):
     Production Config class
     '''
     pass
+=======
+    'test': TestConfig
+}
+
+
+
+
+>>>>>>> review
 

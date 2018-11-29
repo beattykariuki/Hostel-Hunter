@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from . import db 
 from werkzeug.security import generate_password_hash,check_password_hash
 from . import login_manager
@@ -74,3 +75,23 @@ class Role(db.Model):
     def __repr__(self):
         return f'User {self.name}' 
     
+=======
+from . import db
+from datetime import datetime
+
+class Review(db.Model):
+
+    __tablename__ = 'reviews'
+
+    id = db.Column(db.Integer,primary_key = True)
+    # hostel_id = db.Column(db.Integer,db.ForeignKey('hostels.id'))
+    review = db.Column(db.String())
+    # user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+
+    
+    def save_comment(self):
+
+        db.session.add(self)
+        db.session.commit()
+>>>>>>> review
