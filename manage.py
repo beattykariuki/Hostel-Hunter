@@ -1,6 +1,6 @@
 from app import create_app,db
-from app.models import User,Role
-from flask_migrate import, MigrateCommand
+from app.models import User,Role,Review
+from flask_migrate import MigrateCommand
 
 migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
