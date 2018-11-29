@@ -1,6 +1,6 @@
 import os
  
- class Config():
+class Config:
      '''
      Configuration parent class
      '''
@@ -19,3 +19,7 @@ class ProdConfig(Config):
     '''
     pass
 
+config_options = {
+    'development':DevConfig,
+    'production':ProdConfig
+}

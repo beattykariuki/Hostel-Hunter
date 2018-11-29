@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/beatty/Desktop/projects/Python/hostel/virtual"
+set -gx VIRTUAL_ENV "/home/stacy/Documents/projects/python/flask_project/Hostel-Hunter/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
