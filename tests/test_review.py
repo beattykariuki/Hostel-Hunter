@@ -10,7 +10,7 @@ class TestReview(unittest.TestCase):
         """
         This will create a new review before each test
         """
-        self.new_review = Review(title = "Haha")
+        self.new_review = Review(title = "Comment")
 
     def tearDown(self):
         """

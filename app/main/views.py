@@ -12,7 +12,7 @@ from flask_login import login_required,current_user
 @login_required
 def review(user,review_id):
     user = User.query.filter_by(id = user).first()
-    review = Review.query.filter_by(id = pitch_id).first()
+    review = Review.query.filter_by(id = _id).first()
     form = ReviewForm()
     title = "Add review"
     if form.validate_on_submit():
