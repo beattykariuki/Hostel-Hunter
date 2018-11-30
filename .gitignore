@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 virtual/
 *.pyc
 .vscode/
 start.sh
-=======
-.vscode
->>>>>>> searchHostel
+
+
