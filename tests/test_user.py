@@ -1,7 +1,7 @@
-import unnitest
+import unittest
 from app.models import User
 
-class UserModelTest(unnitest.TestCase):
+class UserModelTest(unittest.TestCase):
 
     def setUp(self):
         self.new_user = User(password = 'mypassword')
